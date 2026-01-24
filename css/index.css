@@ -1,0 +1,161 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text span {
+  font-weight: 600;
+  color: #555;
+}
+
+.hero-image img {
+  border-radius: 12px;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 1rem;
+}
+
+.featured-author {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.featured-author h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featured-author .author-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.featured-author .author-card img {
+  flex-shrink: 0;
+}
+
+.featured-author .author-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-author .author-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.featured-author .author-info p {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.featured-author img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+footer {
+  background: #070707;
+  color: #eee;
+  padding: 2rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .featured-author .author-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Book Explorer</title>
+    <link rel="stylesheet" href="css/explorer.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="main-header">
+      <nav class="navbar">
+          <img src="images/logo.jpg" class="logo" alt="Readify Logo">
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="explorer.html" class="active">Book Explorer</a></li>
+              <li><a href="tracker.html">Reading Tracker</a></li>
+              <li><a href="recommender.html">Recommendations</a></li>
+              <li><a href="flow.html">Reading Flow</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+          <div class="hamburger">&#9776;</div>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <h1>Book Explorer</h1>
+      <p>Discover books by genre, author, or popularity.</p>
+
+      <div class="controls">
+        <input type="text" id="search-input" placeholder="Search by title or author..." class="search-box">
+        <select id="genre-filter" class="filter-select">
+          <option value="">All Genres</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Dystopian">Dystopian</option>
+          <option value="Romance">Romance</option>
+          <option value="Comedy">Comedy</option>
+        </select>
+        <button onclick="sortByRating()" id="sort-btn" class="sort-btn">Sort by Rating</button>
+      </div>
+
+      <section id="book-grid">
+        
+      </section>
+    </main>
+
+    <footer>
+          <form id="newsletter-form">
+                <label for="newsletter-email" class="visually-hidden">Email</label>
+                <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+                <button id="subscribe-button" type="submit">Subscribe</button>
+          </form>
+        <div class="footer-content">
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommendations</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <p class="footer-text">
+            &copy; 2025 Readify.
+            </p>
+        </div>
+    </footer>  
+
+    <script src="javascript/explorer.js"></script>
+</body>
+</html>

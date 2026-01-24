@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Readify | Home</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <header id="main-header">
+            <nav class="navbar">
+                <img src="images/logo.jpg" alt="Readify Logo" class="logo">
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="explorer.html">Book Explorer</a></li>
+                    <li><a href="tracker.html">Reading Tracker</a></li>
+                    <li><a href="recommender.html">Recommendations</a></li>
+                    <li><a href="flow.html">Reading Flow</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+
+                <div class="hamburger">&#9776;</div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero-grid">
+                <div class="hero-text">
+                    <h1>Read. Discover. Escape.</h1>
+
+                    <p id="book-quote">“A reader lives a thousand lives before he dies.”</p>
+                    <span id="quote-author">— George R.R. Martin</span>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/bg-image.jpg" alt="Books illustration">
+                </div>
+            </section>
+
+            <section class="featured-author">
+                <h2>Author of the Day</h2>
+
+                <div class="author-card">
+                    <img src="images/William-Blake.jpg" alt="Author photo">
+                    <div>
+                        <h3 id="author-name">William Blake</h3>
+                        <p id="author-bio">
+                            Visionary English poet and artist of the Romantic era.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <form id="newsletter-form">
+                <label for="newsletter-email" class="visually-hidden">Email</label>
+                <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+                <button id="subscribe-button" type="submit">Subscribe</button>
+            </form>
+            <div class="footer-content">
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explorer.html">Book Explorer</a></li>
+                    <li><a href="tracker.html">Reading Tracker</a></li>
+                    <li><a href="recommender.html">Recommendations</a></li>
+                    <li><a href="flow.html">Reading Flow</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <p class="footer-text">
+                &copy; 2025 Readify.
+                </p>
+            </div>
+        </footer>
+
+        <script src="javascript/index.js"></script>
+    </body>
+</html>

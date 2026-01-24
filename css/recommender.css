@@ -1,0 +1,238 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.page-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-content > p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   RECOMMENDATIONS CONTAINER
+========================= */
+
+.recommendations-container {
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   RECOMMENDATIONS LIST
+========================= */
+
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   RECOMMENDATION CARD
+========================= */
+
+.recommendation-card {
+  background: #f7f7fb;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.recommendation-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-card .author {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-card .reason {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.recommendation-card .match-score {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.recommendations-list p {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   RECOMMENDER CONTROLS
+========================= */
+
+.recommender-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.recommender-controls select,
+.recommender-controls button {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.recommender-controls button {
+  background: #000000;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.recommender-controls button:hover {
+  background: #363636;
+}
+
+/* =========================
+   RECOMMENDATION AREA
+========================= */
+
+.recommendation-area {
+  min-height: 120px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.recommendation-area.animate {
+  animation: pop 0.4s;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+#pick-again-btn, #save-btn {
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#pick-again-btn:hover, #save-btn:hover {
+  background: #363636;
+}
+
+/* =========================
+   SAVED LIST
+========================= */
+
+.saved-list {
+  margin-top: 2rem;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.saved-list h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.saved-list ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.saved-list li {
+  margin-bottom: 0.4rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .recommendations-list {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .page-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .recommendations-container {
+    padding: 1.5rem;
+  }
+
+  .recommendations-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .recommendation-card {
+    padding: 1rem;
+  }
+}

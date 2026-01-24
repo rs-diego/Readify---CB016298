@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Readify | Recommendations</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/recommender.css">
+</head>
+
+<body>
+    <header id="main-header">
+      <nav class="navbar">
+        <img src="images/logo.jpg" class="logo" alt="Readify Logo">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explorer.html">Book Explorer</a></li>
+          <li><a href="tracker.html">Reading Tracker</a></li>
+          <li><a href="recommender.html" class="active">Recommendations</a></li>
+          <li><a href="flow.html">Reading Flow</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+        <div class="hamburger">&#9776;</div>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <h1>Random Book Recommender</h1>
+      <div class="recommender-controls">
+        <select id="genre-select">
+          <option value="">Any Genre</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Memoir">Memoir</option>
+        </select>
+        <select id="length-select">
+          <option value="">Any Length</option>
+          <option value="Short">Short</option>
+          <option value="Medium">Medium</option>
+          <option value="Long">Long</option>
+        </select>
+        <button id="pick-btn">Pick a Book</button>
+      </div>
+
+      <div id="recommendation-area"></div>
+      <div class="recommender-actions" style="margin-bottom:1.5rem;">
+        <button id="pick-again-btn" style="display:none;">Pick Again</button>
+        <button id="save-btn" style="display:none;">Save</button>
+      </div>
+
+      <div id="saved-list" class="saved-list">
+        <h2>My Reading List</h2>
+        <ul id="reading-list"></ul>
+      </div>
+    </main>
+
+    <footer>
+        <form id="newsletter-form">
+            <label for="newsletter-email" class="visually-hidden">Email</label>
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+            <button id="subscribe-button" type="submit">Subscribe</button>
+        </form>
+        <div class="footer-content">
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Book Explorer</a></li>
+                <li><a href="tracker.html">Reading Tracker</a></li>
+                <li><a href="recommender.html">Recommendations</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <p class="footer-text">
+            &copy; 2025 Readify.
+            </p>
+        </div>
+    </footer>
+
+    <script src="javascript/recommender.js"></script>
+</body>
+</html>

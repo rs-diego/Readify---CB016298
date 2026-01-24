@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Readify | Reading Tracker</title>
+      <link rel="stylesheet" href="css/tracker.css">
+      <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+      <header id="main-header">
+        <nav class="navbar">
+          <img src="images/logo.jpg" class="logo" alt="Readify Logo">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explorer.html">Book Explorer</a></li>
+            <li><a href="tracker.html" class="active">Reading Tracker</a></li>
+            <li><a href="recommender.html">Recommendations</a></li>
+            <li><a href="flow.html">Reading Flow</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+
+          <div class="hamburger">&#9776;</div>
+        </nav>
+      </header>
+
+      <main class="page-content">
+        <h1>Reading Tracker</h1>
+        <p>Track your reading progress easily.</p>
+
+        <div class="progress-tracker-section">
+            <h2>Reading Progress Tracker</h2>
+            <form id="progress-form">
+                <input type="number" id="total-pages" placeholder="Total Pages" required>
+                <input type="number" id="pages-read" placeholder="Pages Read" required>
+                <input type="number" id="reading-speed" placeholder="Pages per Day" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="progress-results" style="display:none;">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+                </div>
+                <p id="percent-completed"></p>
+                <p id="estimated-finish"></p>
+                <button id="save-progress">Save Progress</button>
+            </div>
+        </div>
+      </main>
+
+      <footer>
+          <form id="newsletter-form">
+              <label for="newsletter-email" class="visually-hidden">Email</label>
+              <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+              <button id="subscribe-button" type="submit">Subscribe</button>
+        </form>
+          <div class="footer-content">
+              <ul class="footer-nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="explorer.html">Book Explorer</a></li>
+                  <li><a href="tracker.html">Reading Tracker</a></li>
+                  <li><a href="recommender.html">Recommendations</a></li>
+                  <li><a href="flow.html">Reading Flow</a></li>
+                  <li><a href="feedback.html">Feedback</a></li>
+              </ul>
+              <p class="footer-text">
+              &copy; 2025 Readify.
+              </p>
+          </div>
+      </footer>
+
+      <script src="javascript/tracker.js"></script>
+  </body>
+</html>
