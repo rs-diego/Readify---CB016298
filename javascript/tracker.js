@@ -119,7 +119,7 @@ document.getElementById('save-progress').addEventListener('click', function ()
     alert('Please click Calculate first!');
     return;
   }
-  else if
+  else
   {
     localStorage.setItem('readingProgress', JSON.stringify(latestData));
     alert('Progress saved!');
@@ -149,6 +149,7 @@ if (newsletterForm && newsletterEmailInput)
 
   });
 }
+
 
 
 
