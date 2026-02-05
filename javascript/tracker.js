@@ -1,7 +1,8 @@
 const hamburgerBtn = document.querySelector('.hamburger');
 const navigationLinks = document.querySelector('.nav-links');
 
-if (hamburgerBtn && navigationLinks) {
+if (hamburgerBtn && navigationLinks) 
+{
   hamburgerBtn.addEventListener('click', function() {
     navigationLinks.classList.toggle('show');
   });
@@ -20,12 +21,14 @@ document.addEventListener('DOMContentLoaded', function()
   renderBooks();
 
   const addBookForm = document.getElementById('add-book-form');
-  if (addBookForm) {
+  if (addBookForm) 
+  {
     addBookForm.addEventListener('submit', addBook);
   }
 });
 
-function addBook(event) {
+function addBook(event) 
+{
   event.preventDefault();
   
   books.push({
@@ -40,12 +43,14 @@ function addBook(event) {
   event.target.reset();
 }
 
-function renderBooks() {
+function renderBooks() 
+{
   const list = document.getElementById('books-list');
   if (!list) return;
 
   let html = '';
-  for (let book of books) {
+  for (let book of books) 
+  {
     html += `
       <div class="book-item">
         <div class="book-info">
@@ -83,18 +88,15 @@ document.getElementById('progress-form').addEventListener('submit', function (ev
 
   document.getElementById('progress-results').style.display = 'block';
   document.getElementById('progress-fill').style.width = percent + '%';
-  document.getElementById('percent-completed').textContent =
-    'Completed: ' + percent + '%';
+  document.getElementById('percent-completed').textContent = 'Completed: ' + percent + '%';
 
   if (daysLeft > 0) 
   {
-    document.getElementById('estimated-finish').textContent =
-      'Estimated finish: ' + daysLeft + ' day(s)';
+    document.getElementById('estimated-finish').textContent = 'Estimated finish: ' + daysLeft + ' day(s)';
   } 
   else 
   {
-    document.getElementById('estimated-finish').textContent =
-      "You've finished!";
+    document.getElementById('estimated-finish').textContent = "You've finished!";
   }
 });
 
@@ -117,9 +119,11 @@ document.getElementById('save-progress').addEventListener('click', function ()
     alert('Please click Calculate first!');
     return;
   }
-
-  localStorage.setItem('readingProgress', JSON.stringify(latestData));
-  alert('Progress saved!');
+  else if
+  {
+    localStorage.setItem('readingProgress', JSON.stringify(latestData));
+    alert('Progress saved!');
+  }
 });
 
 
@@ -145,5 +149,6 @@ if (newsletterForm && newsletterEmailInput)
 
   });
 }
+
 
 
