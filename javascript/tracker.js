@@ -70,28 +70,31 @@ function deleteBook(id)
   renderBooks();
 }
 
-document.getElementById('progress-form').addEventListener('submit', function(event) 
+document.getElementById('progress-form').addEventListener('submit', function (event) 
 {
   event.preventDefault();
-  const totalPages = parseInt(document.getElementById('total-pages').value);
-  const read = parseInt(document.getElementById('pages-read').value);
-  const speed = parseInt(document.getElementById('reading-speed').value);
 
-  if (totalPages > 0 && read >= 0 && speed > 0 && read <= totalPages) 
+  const totalPages = document.getElementById('total-pages').value;
+  const pagesRead = document.getElementById('pages-read').value;
+  const speed = document.getElementById('reading-speed').value;
+
+  const percent = Math.round((pagesRead / totalPages) * 100);
+  const daysLeft = Math.ceil((totalPages - pagesRead) / speed);
+
+  document.getElementById('progress-results').style.display = 'block';
+  document.getElementById('progress-fill').style.width = percent + '%';
+  document.getElementById('percent-completed').textContent =
+    'Completed: ' + percent + '%';
+
+  if (daysLeft > 0) 
   {
-    const percent = Math.round((read / totalPages) * 100);
-    const daysLeft = Math.ceil((totalPages - read) / speed);
-    let finish;
-    if (daysLeft > 0) 
-    {
-      finish = "Estimated finish: " + daysLeft + " day(s)";
-    } 
-    else 
-    {
-      finish = "You've finished!";
-    }
-    const data = { total, read, speed, percent, finish };
-    showResults(data);
+    document.getElementById('estimated-finish').textContent =
+      'Estimated finish: ' + daysLeft + ' day(s)';
+  } 
+  else 
+  {
+    document.getElementById('estimated-finish').textContent =
+      "You've finished!";
   }
 });
 
@@ -131,3 +134,4 @@ if (newsletterForm && newsletterEmailInput)
 
   });
 }
+
