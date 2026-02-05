@@ -98,19 +98,30 @@ document.getElementById('progress-form').addEventListener('submit', function (ev
   }
 });
 
+let latestData = null; 
+
 function showResults(data) 
 {
+  latestData = data; 
+
   document.getElementById('progress-results').style.display = 'block';
   document.getElementById('progress-fill').style.width = data.percent + '%';
-  document.getElementById('percent-completed').textContent = `Completed: ${data.percent}%`;
+  document.getElementById('percent-completed').textContent = 'Completed: ' + data.percent + '%';
   document.getElementById('estimated-finish').textContent = data.finish;
-
-  document.getElementById('save-progress').onclick = function() 
-  {
-    localStorage.setItem('readingProgress', JSON.stringify(data));
-    alert('Progress saved!');
-  };
 }
+
+document.getElementById('save-progress').addEventListener('click', function () 
+{
+  if (latestData === null) 
+  {
+    alert('Please click Calculate first!');
+    return;
+  }
+
+  localStorage.setItem('readingProgress', JSON.stringify(latestData));
+  alert('Progress saved!');
+});
+
 
 const newsletterForm = document.getElementById('newsletter-form');
 const newsletterEmailInput = document.getElementById('newsletter-email');
@@ -134,4 +145,5 @@ if (newsletterForm && newsletterEmailInput)
 
   });
 }
+
 
