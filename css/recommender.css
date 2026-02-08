@@ -29,29 +29,18 @@ body {
   margin-bottom: 2rem;
 }
 
-/* =========================
-   RECOMMENDATIONS CONTAINER
-========================= */
-
 .recommendations-container {
   background: #ffffff;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================
-   RECOMMENDATIONS LIST
-========================= */
 
 .recommendations-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
-
-/* =========================
-   RECOMMENDATION CARD
-========================= */
 
 .recommendation-card {
   background: #f7f7fb;
@@ -98,9 +87,6 @@ body {
   font-weight: 600;
 }
 
-/* =========================
-   EMPTY STATE
-========================= */
 
 .recommendations-list p {
   grid-column: 1 / -1;
@@ -109,10 +95,6 @@ body {
   color: #999;
   font-size: 1.1rem;
 }
-
-/* =========================
-   RECOMMENDER CONTROLS
-========================= */
 
 .recommender-controls {
   display: flex;
@@ -142,9 +124,6 @@ body {
   background: #363636;
 }
 
-/* =========================
-   RECOMMENDATION AREA
-========================= */
 
 .recommendation-area {
   min-height: 120px;
@@ -156,9 +135,6 @@ body {
   animation: pop 0.4s;
 }
 
-/* =========================
-   BUTTONS
-========================= */
 
 #pick-again-btn, #save-btn {
   margin-right: 1rem;
@@ -176,10 +152,6 @@ body {
 #pick-again-btn:hover, #save-btn:hover {
   background: #363636;
 }
-
-/* =========================
-   SAVED LIST
-========================= */
 
 .saved-list {
   margin-top: 2rem;
@@ -204,9 +176,6 @@ body {
   font-size: 1rem;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 1024px) {
   .recommendations-list {
