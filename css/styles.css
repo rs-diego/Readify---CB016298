@@ -41,10 +41,6 @@ ul {
   left: -9999px;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
 #main-header {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
@@ -94,24 +90,12 @@ ul {
   cursor: pointer;
 }
 
-/* =========================
-   SHARED TYPOGRAPHY
-========================= */
-
 h1,
 h2,
 h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 1rem;
 }
-
-section {
-  margin-bottom: 3rem;
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
   background: #111;
@@ -173,10 +157,6 @@ footer {
 #subscribe-button:hover{
   background-color: #363636;
 }
-
-/* =========================
-   RESPONSIVE NAVBAR
-========================= */
 
 @media (max-width: 768px) {
   .nav-links {
