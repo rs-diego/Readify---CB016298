@@ -12,7 +12,6 @@ const books =
 [
   { title: "The Obsidian Chronicles", author: "Lawrence Watt-Evans", genre: "Fantasy", length: "Medium" },
   { title: "Shadows Upon Time", author: "Christopher Ruocchio", genre: "Sci-Fi", length: "Long" },
-  { title: "Cat", author: "Christine Kuehn", genre: "Rebecca van Laer", length: "Short" },
   { title: "The Goldfinch", author: "Donna Tartt", genre: "Fiction", length: "Long" },
   { title: "Goosebumps: Welcome to Dead House", author: "R.L. Stine", genre: "Fantasy", length: "Short" },
   { title: "Vagabond: A Memoir", author: "Tim Curry", genre: "Memoir", length: "Medium" },
@@ -168,3 +167,4 @@ if (newsletterForm && newsletterEmailInput)
 
   });
 }
+
