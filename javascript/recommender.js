@@ -25,17 +25,12 @@ let currentBook = null;
 
 document.addEventListener('DOMContentLoaded', function() 
 {
-  byId('pick-btn').onclick = pickBook;
-  byId('pick-again-btn').onclick = pickBook;
-  byId('save-btn').onclick = saveBook;
+  document.getElementById('pick-btn').onclick = pickBook;
+  document.getElementById('pick-again-btn').onclick = pickBook;
+  document.getElementById('save-btn').onclick = saveBook;
 
   renderSavedList();
 });
-
-function byId(id)
-{
-  return document.getElementById(id);
-}
 
 function showBook(book) 
 {
@@ -56,7 +51,7 @@ function showBook(book)
     lengthText = "Length: " + book.length;
   }
 
-  byId('recommendation-area').innerHTML =
+  document.getElementById('recommendation-area').innerHTML =
     '<div class="recommendation-card">' +
       '<h3>' + book.title + '</h3>' +
       '<p>' + authorText + '</p>' +
@@ -67,8 +62,8 @@ function showBook(book)
 
 function pickBook() 
 {
-  let genre = byId('genre-select').value;
-  let length = byId('length-select').value;
+  let genre = document.getElementById('genre-select').value;
+  let length = document.getElementById('length-select').value;
 
   let filtered = [];
 
@@ -89,7 +84,7 @@ function pickBook()
   if (filtered.length === 0) 
   {
     showBook({ title: "No match found!", author: "", genre: "", length: "" });
-    byId('save-btn').style.display = "none";
+    document.getElementById('save-btn').style.display = "none";
     return;
   }
 
@@ -98,8 +93,8 @@ function pickBook()
 
   showBook(currentBook);
 
-  byId('pick-again-btn').style.display = "inline-block";
-  byId('save-btn').style.display = "inline-block";
+  document.getElementById('pick-again-btn').style.display = "inline-block";
+  document.getElementById('save-btn').style.display = "inline-block";
 }
 
 function saveBook() 
