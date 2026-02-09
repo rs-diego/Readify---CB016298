@@ -128,7 +128,7 @@ function renderSavedList()
     list = [];
   }
 
-  let readingListElement = byId('reading-list');
+  let readingListElement = document.getElementById('reading-list');
   
   if (list.length > 0) 
   {
@@ -167,4 +167,5 @@ if (newsletterForm && newsletterEmailInput)
 
   });
 }
+
 
